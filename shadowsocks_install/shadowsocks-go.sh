@@ -251,12 +251,12 @@ download_files(){
 
     # Download start script
     if check_sys packageManager yum; then
-        if ! wget --no-check-certificate -O /etc/init.d/shadowsocks https://raw.githubusercontent.com/darklost/auto_shell/master/shadowsocks_installshadowsocks-go; then
+        if ! wget --no-check-certificate -O /etc/init.d/shadowsocks https://raw.githubusercontent.com/darklost/auto_shell/master/shadowsocks_install/shadowsocks-go; then
             echo -e "[${red}Error${plain}] Failed to download shadowsocks-go auto start script!"
             exit 1
         fi
     elif check_sys packageManager apt; then
-        if ! wget --no-check-certificate -O /etc/init.d/shadowsocks https://raw.githubusercontent.com/darklost/auto_shell/master/shadowsocks_installshadowsocks-go-debian; then
+        if ! wget --no-check-certificate -O /etc/init.d/shadowsocks https://raw.githubusercontent.com/darklost/auto_shell/master/shadowsocks_install/shadowsocks-go-debian; then
             echo -e "[${red}Error${plain}] Failed to download shadowsocks-go auto start script!"
             exit 1
         fi

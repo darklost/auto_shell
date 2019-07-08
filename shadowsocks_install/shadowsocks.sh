@@ -242,12 +242,12 @@ download_files(){
     fi
     # Download Shadowsocks init script
     if check_sys packageManager yum; then
-        if ! wget --no-check-certificate https://raw.githubusercontent.com/darklost/auto_shell/master/shadowsocks_installshadowsocks -O /etc/init.d/shadowsocks; then
+        if ! wget --no-check-certificate https://raw.githubusercontent.com/darklost/auto_shell/master/shadowsocks_install/shadowsocks -O /etc/init.d/shadowsocks; then
             echo -e "[${red}Error${plain}] Failed to download shadowsocks chkconfig file!"
             exit 1
         fi
     elif check_sys packageManager apt; then
-        if ! wget --no-check-certificate https://raw.githubusercontent.com/darklost/auto_shell/master/shadowsocks_installshadowsocks-debian -O /etc/init.d/shadowsocks; then
+        if ! wget --no-check-certificate https://raw.githubusercontent.com/darklost/auto_shell/master/shadowsocks_install/shadowsocks-debian -O /etc/init.d/shadowsocks; then
             echo -e "[${red}Error${plain}] Failed to download shadowsocks chkconfig file!"
             exit 1
         fi
