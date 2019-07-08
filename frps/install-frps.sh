@@ -678,7 +678,7 @@ uninstall_program_server(){
     exit 0
 }
 ############################### update ##################################
-update_config_clang(){
+update_config(){
     if [ ! -r "${str_program_dir}/${program_config_file}" ]; then
         echo "config file ${str_program_dir}/${program_config_file} not found."
     else
@@ -780,7 +780,7 @@ update_program_server(){
     fun_info "clear"
     if [ -s ${program_init} ] || [ -s ${str_program_dir}/${program_name} ] ; then
         echo "============== Update ${program_name} =============="
-        update_config_clang
+        update_config
         checkos
         check_centosversion
         check_os_bit
